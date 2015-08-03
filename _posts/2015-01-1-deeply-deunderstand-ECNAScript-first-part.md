@@ -45,12 +45,28 @@ excerpt: Javascript基本语法 引用传递 作用域
     
   ---
   
-  *对于复杂类型Object，它可以作为构造函数创建出对象，对象是一组数据与函数的集合，可以通过new操作符加构造函数来创建，
+  * 对于复杂类型Object，它可以作为构造函数创建出对象，对象是一组数据与函数的集合，可以通过new操作符加构造函数来创建，
   从中我们引申出引用类型。
   
-  *引用类型有：Object,Array,RegExp,Function,基本包装类型（Boolean,Number,String）.
+  * 引用类型有：Object,Array,RegExp,Function,基本包装类型（Boolean,Number,String）.
   
-  ###首先我们首先来谈引用类型特有的引用传递，也是很多错误的发源地。
+  * 首先我们首先来谈引用类型特有的引用传递，也是很多错误的发源地。
   
-  应用
-  
+      引用类型的传递时基于引用的，可以理解成指向一个对象的指针，其中包含了该对象在内存中的地址，变量是通过这个地址和
+对象产生了联系，并不是直接存储了该对象。
+      
+     **示例:**
+    
+      <pre><code class="markdown">  
+        var object1=new Object();
+        var object2=boject1;
+        object2.num="123"
+        alert(object2.num) //a=="123"
+        
+        var arr=[1,2];
+        var arr2=arr;
+        arr2[0]=2;
+        alert(arr2) //2,2
+        从上可以看出引用类型是引用传递的，object2=boject1时是把boject1所指向对象的地址赋给了object2，这样object2和object1都指向了同一个对象，所有指向这个对象的变量都会同样反映出它的修改。
+      **注意** 其实this也是对本作用域环境变量对象的引用，所以也是引用传递。所以可以将需要的环境变量对象赋给一个变量，在其他作用域下引用需要的环境变量对象。
+      </code></pre>
