@@ -72,3 +72,16 @@ excerpt: Javascript基本语法 引用传递 作用域
       **注意** 其实this也是对本作用域环境变量对象的引用，所以也是引用传递。所以可以将需要的环境变量对象赋给一个
       变量，在其他作用域下引用需要的环境变量对象。
       </code></pre>
+
+      但是函数的参数始终是按值传递的，对可能的误解给出示例：
+        <pre><code class="markdown">
+            function setName(obj){
+              obj.name="Miriring";
+              obj=new Object();
+              obj.name="csp"
+            }
+            var person=new Object();
+            setName(person);
+            alert(person.name);  //Miriring
+            从上得知obj这个参数其实只是取得了person所存储的指向对象的地址副本，当这个地址被新对象地址覆盖后就不再指向原对象了，所以对于obj地址的修改不会影响到person变量，person仍旧指向原对象
+        </code></pre>
