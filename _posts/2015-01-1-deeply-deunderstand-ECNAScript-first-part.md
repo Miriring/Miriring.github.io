@@ -24,7 +24,7 @@ excerpt: Javascript基本语法 引用传递 作用域
   
 ##数据类型
 
-  *五种基本类型:Undefined,Null,Boolean,Number,String，一个复杂类型：Object。
+  * 五种基本类型:Undefined,Null,Boolean,Number,String，一个复杂类型：Object。
  >
  >对于五种基本类型而言是值类型，在变量传递的时候使用的是值传递，可以看作是复制了一分一模一样的副本，该副本与原来的
   完全独立
