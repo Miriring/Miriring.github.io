@@ -50,7 +50,7 @@ excerpt: Javascript基本语法 引用传递 作用域
   
   *引用类型有：Object,Array,RegExp,Function,基本包装类型（Boolean,Number,String）.
   
-  *###首先我们首先来谈引用类型特有的引用传递，也是很多错误的发源地。
+  ###首先我们首先来谈引用类型特有的引用传递，也是很多错误的发源地。
   
   应用
   
