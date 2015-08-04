@@ -152,6 +152,36 @@ subType的原型对象完成引用。
 字构造函数原型对象的方式，避免了多余公用方法和属性的继承。
 
 
+##闭包
+  
+*闭包简单点说就是函数中嵌套的函数可以通过作用域链反问外层的变量对象，而外层的无法访问里层变量对象。
+  
+1. 变量访问遵从作用域链
+2. 由于里层引用，可以访问到私有变量与函数
+3. 由于引用的存在，可能导致活动对象无法销毁，内存占用过多，需手动设置null销毁
+  
+**示例4**
+      function myConstructor(message){
+        this.myMessage=message;
+        var separator='|';
+        var myOwn=this;
+      funtion alertMessage(){
+        alert(myOwn.myMessage);
+        }
+      alertMessage();
+      this.appendTOMessage=funtion(string){
+        this.myMessage+=separator+string;
+        alertMessage();
+        }
+      }
+
+1. 从上我们可以看到，定义的私有变量separator，myOwn，私有方法alertMessage；但私有方法与属性可以通过将一个方法绑定到实例
+对象上，通过方法函数来调用私有变量与方法，这时候其实不是在实例对象上调用，而是通过作用域链的关系引用到了私有方法和属性
+由于这种引用的存在使得实例对象间接访问到了私有变量与方法，并且有引用存在的话就不会被销毁。
+2. 其中通过将this赋给myOwn，将本作用域的变量对象传到了函数alertMessage，使得可以访问绑定到实例对象上的myMessage；而使用this绑定到实例对象上的方法和属性都不是私有的。
+
+**总结** 闭包最大的作用我想第一产生了私有变量和方法，第二可以通过返回内层函数或将内存函数绑定到实例对象上的方式使得外层函数得以访问到私有变量和方法。
+
         
 
 
