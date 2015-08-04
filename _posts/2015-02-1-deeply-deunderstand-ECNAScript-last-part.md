@@ -161,6 +161,7 @@ subType的原型对象完成引用。
 3. 由于引用的存在，可能导致活动对象无法销毁，内存占用过多，需手动设置null销毁
   
 **示例4**
+<pre><code class="markdown"> 
         function myConstructor(message){
         this.myMessage=message;
         var separator='|';
@@ -174,6 +175,7 @@ subType的原型对象完成引用。
         alertMessage();
          }
         }
+</code></pre>
 
 1. 从上我们可以看到，定义的私有变量separator，myOwn，私有方法alertMessage；但私有方法与属性可以通过将一个方法绑定到实例
 对象上，通过方法函数来调用私有变量与方法，这时候其实不是在实例对象上调用，而是通过作用域链的关系引用到了私有方法和属性
