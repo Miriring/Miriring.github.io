@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "深入了解ECNAScript上"
+title:  "深入了解ECMAScript上"
 date:   2015-01-1 12:06:05
 categories:  JavaScript
 excerpt: Javascript基本语法 引用传递 作用域 
