@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "深入了解ECNAScript下"
+title:  "深入了解ECMAScript下"
 date:   2015-08-3 12:17:06
 categories:  JavaScript
 excerpt: Javascript作用域链  原型  组合式构造函数  寄生组合式继承  闭包
