@@ -70,6 +70,7 @@ yoman作为一个由yo,grunt,bower的集成方案，完成了项目的整个初�
   </code></pre>
   
   **这是我的gulpfile.js**
+  
         <pre><code class="markdown">
           var gulp = require('gulp'),
           imagemin = require('gulp-imagemin'),
@@ -148,4 +149,4 @@ yoman作为一个由yo,grunt,bower的集成方案，完成了项目的整个初�
       gulp.task('default', ['clean'], function() { 
           gulp.start('cssmin','jsmin','htmlmin','imagemin');
       });
-  </doce></pre>
+  </code></pre>
