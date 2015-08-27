@@ -10,3 +10,4 @@ excerpt: Angular route 数据传递
 {:toc}
 
 ##RESTful
+  将将资源与地址关联，把数据抽象为地址来作为接口。
