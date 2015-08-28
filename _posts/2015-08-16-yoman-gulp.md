@@ -97,7 +97,7 @@ yoman作为一个由yo,grunt,bower的集成方案，完成了项目的整个初�
       gulp.task('cssmin', function () {
           gulp.src('src/css/*.css')
               .pipe(autoprefixer({
-                  browsers: ['last 2 versions']
+                  browsers: ['last 2 versions', 'ie 8', 'ie 9']
               }))
               .pipe(cssmin({
                   advanced: false,
